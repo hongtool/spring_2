@@ -3,6 +3,7 @@ package com.spring.beans;
 public class Person {
 
 	private String name;
+	private String age;
 	private Car car;
 
 	public String getName() {
@@ -11,6 +12,14 @@ public class Person {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
 	}
 
 	public Car getCar() {
@@ -23,7 +32,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", car=" + car + "]";
+		return "Person [name=" + name + ", age=" + age + ", car=" + car + "]";
 	}
 
 }
