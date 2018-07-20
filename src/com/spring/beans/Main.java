@@ -9,5 +9,8 @@ public class Main {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
 		Person person1 = (Person) ac.getBean("person1");
 		System.out.println(person1);
+		
+		/*Person person2 = (Person) ac.getBean("person2");
+		System.out.println(person2);*/
 	}
 }

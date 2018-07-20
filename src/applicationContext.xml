@@ -5,5 +5,17 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="car1" class="com.spring.beans.Car" p:type="宝马"></bean>
-	<bean id="person1" class="com.spring.beans.Person" autowire="byType"></bean>
+	<!-- byType:按照类型自动装配 -->
+	<!-- <bean id="person1" class="com.spring.beans.Person" autowire="byType"></bean>
+	<bean id="person2" parent="person1"></bean> -->
+	
+	<!-- <bean id="car" class="com.spring.beans.Car" p:type="奔驰"></bean> -->
+	<!-- <bean id="person1" class="com.spring.beans.Person" autowire="byName"></bean> -->
+	
+	<!-- <bean id="bastractPerson" abstract="true" p:name="Tom" p:car-ref="car1"></bean>
+	<bean id="person1" class="com.spring.beans.Person" p:name="李四" p:car-ref="car1"></bean>
+	<bean id="person2" parent="bastractPerson" p:name="王五"></bean> -->
+	
+	<bean id="person1" class="com.spring.beans.Person" p:name="李四" p:car-ref="car1" depends-on="car1"></bean>
+	
 </beans>
