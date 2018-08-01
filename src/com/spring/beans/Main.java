@@ -10,8 +10,8 @@ public class Main {
 		Person person1 = (Person) ac.getBean("person1");
 		System.out.println(person1);
 		
-		/*Person person2 = (Person) ac.getBean("person2");
-		System.out.println(person2);*/
+		Person person2 = (Person) ac.getBean("person2");
+		System.out.println(person2);
 		
 //		Car car1 = (Car) ac.getBean("car1");
 //		Car car2 = (Car) ac.getBean("car1");

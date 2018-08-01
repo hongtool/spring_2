@@ -3,7 +3,7 @@ package com.spring.beans;
 public class Person {
 
 	private String name;
-	private String age;
+	private int age;
 	private Car car;
 
 	public String getName() {
@@ -14,11 +14,11 @@ public class Person {
 		this.name = name;
 	}
 
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
 
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 

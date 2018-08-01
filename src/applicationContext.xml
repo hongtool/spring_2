@@ -23,7 +23,21 @@
 	<!-- <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location" value="classpath:person.properties"></property>
 	</bean> -->
-	<context:property-placeholder location="classpath:person.properties"/>
+	<!-- <context:property-placeholder location="classpath:person.properties"/>
 	<bean id="car1" class="com.spring.beans.Car" p:type="宝马" scope="prototype"></bean>
-	<bean id="person1" class="com.spring.beans.Person" p:name="${personName}" p:age="${personAge}"></bean>
+	<bean id="person1" class="com.spring.beans.Person" p:name="${personName}" p:age="${personAge}"></bean> -->
+	
+	<bean name="car1" class="com.spring.beans.Car">
+		<property name="type" value="BMW"></property>
+	</bean>
+	<bean name="person1" class="com.spring.beans.Person">
+		<property name="name" value="tom"></property>
+		<property name="age" value="22"></property>
+		<property name="car" value="#{car1}"></property>
+	</bean>
+	<bean name="person2" class="com.spring.beans.Person">
+		<property name="name" value="#{person1.name.toUpperCase()}"></property>
+		<property name="age" value="#{person1.age - 2}"></property>
+		<property name="car" value="#{person1.car}"></property>
+	</bean>
 </beans>
