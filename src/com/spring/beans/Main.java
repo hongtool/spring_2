@@ -22,7 +22,11 @@ public class Main {
 		/*DateFormat df = (DateFormat) ac.getBean("dateFormat");
 		System.out.println(df);*/
 		
-		Date d = (Date) ac.getBean("date");
-		System.out.println(d);
+//		Date d = (Date) ac.getBean("date");
+//		System.out.println(d);
+		
+		Car car2 = (Car) ac.getBean("car2");
+		System.out.println(car2);
 	}
+	
 }

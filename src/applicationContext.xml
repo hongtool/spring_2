@@ -43,7 +43,7 @@
 	</bean> -->
 	
 	<!-- 包含静态工厂方法的类 -->
-	<bean id="dateFormat" class="java.text.DateFormat" factory-method="getDateInstance">
+	<!-- <bean id="dateFormat" class="java.text.DateFormat" factory-method="getDateInstance">
 		<constructor-arg value="2"></constructor-arg>
 	</bean>
 	
@@ -52,5 +52,10 @@
 	</bean>
 	<bean id="date" factory-bean="simpleDateFormat" factory-method="parse">
 		<constructor-arg value="2018-8-2 12:10:45"></constructor-arg>
+	</bean> -->
+	
+	<bean id="car1" class="com.spring.beans.Car">
+		<property name="type" value="BMW"></property>
 	</bean>
+	<bean id="car2" class="com.spring.beans.CarFactoryBean"></bean>
 </beans>
